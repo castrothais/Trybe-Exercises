@@ -1,0 +1,19 @@
+p,h1 {
+    text-align: center;
+}
+
+ol li:hover {
+    background-color: rgba(209, 186, 231, 0.589);
+    list-style: none;
+
+}
+
+ol li:active {
+    color: crimson;
+    list-style: none;
+
+}
+
+ul li {
+    list-style: none;
+}
