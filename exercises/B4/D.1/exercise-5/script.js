@@ -174,3 +174,35 @@ if(custoProduto >= 0 && valorVendaProduto >=0) {
     console.log("Error, os valores não podem ser negativos");
 }
 
+//11.Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. 
+//Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
+
+let salarioBruto = 2000.00;
+let aliquotaINSS;
+let impostoRenda;
+
+if(salarioBruto <= 1556.94 ) {
+    aliquotaINSS = 0.08 * salarioBruto
+} else if(salarioBruto >= 1556.95 && salarioBruto <= 2594.92) {
+    aliquotaINSS = 0.09 * salarioBruto
+} else if(salarioBruto >= 2594.93 && salarioBruto <= 5189.82) {
+    aliquotaINSS = 0.11 * salarioBruto
+} else if(salarioBruto >= 5189.82) {
+    aliquotaINSS = 570.88
+}
+
+let baseSalario = salarioBruto - aliquotaINSS;
+
+if(salarioBruto <= 1903.98 ) {
+    impostoRenda = 0
+} else if(salarioBruto >= 1903.99 && salarioBruto <= 2826.65) {
+    impostoRenda = (0.075 * baseSalario) - 142.80
+} else if(salarioBruto >= 2826.66 && salarioBruto <= 3751.05) {
+    impostoRenda = (0.15 * baseSalario) - 354.80
+} else if(salarioBruto >= 3751.06 && salarioBruto <= 4664.68) {
+    impostoRenda = (0.225 * baseSalario) - 636.13
+} else if(salarioBruto >= 4664.68) {
+    impostoRenda = (0.275 * baseSalario) - 869.36
+};
+
+console.log("Salário: " + (baseSalario - impostoRenda));
