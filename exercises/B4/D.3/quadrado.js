@@ -7,6 +7,5 @@ for (let Index = 0; Index < n; Index += 1) {
 }
 
 for (let Index = 0; Index < n; Index += 1) {
-    console.log (linha)
+    console.log (linha);
 }
-
